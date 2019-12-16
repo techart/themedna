@@ -1,0 +1,235 @@
+.tao-admin-filter {
+	padding: 40px 0 0 0;
+
+	.filter-string {
+		width: 100%;
+		border: none;
+		background-color: #efefef;
+		padding: 10px 15px;
+		border-radius: 10px;
+	}
+
+	.filter-checkbox {
+		position: relative;
+		background-color: #efefef;
+		padding: 10px 15px 5px 15px;
+
+		label {
+			color: #888;
+			font-weight: normal;
+		}
+
+		input {
+			position: absolute;
+			right: 10px;
+			top: 7px;
+			border: 1px solid #ccc;
+			height: 17px;
+			width: 17px;
+		}
+	}
+
+	.filter-date {
+		position: relative;
+		background-color: #efefef;
+		padding: 10px 15px 5px 15px;
+
+		label {
+			color: #888;
+			font-weight: normal;
+		}
+
+		input {
+			position: absolute;
+			right: 10px;
+			top: 8px;
+			padding: 7px 5px;
+			font-size: 14px;
+			border: 1px solid #ccc;
+			height: 24px;
+			width: 90px;
+		}
+	}
+
+	.filter-select {
+		.header {
+			position: relative;
+			width: 100%;
+			border: none;
+			background-color: #efefef;
+			padding: 10px 15px;
+			cursor: pointer;
+
+			p {
+				margin: 0;
+				color: #888;
+			}
+
+			span {
+				display: block;
+				position: absolute;
+				top: 13px;
+				right: 10px;
+				width: 14px;
+				height: 14px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		.items {
+			position: relative;
+			padding: 0 0 5px 20px;
+			margin: 20px 0 10px 0;
+			max-height: 200px;
+
+			.item {
+				margin: 0 15px 0 0;
+				padding: 3px;
+				cursor: pointer;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&.selected {
+					background-color: #eee;
+					font-weight: bold;
+				}
+			}
+		}
+
+		&.closed {
+			.header span {
+				background-image: url(/themedna/images/icons/plus-gray.png);
+			}
+			.items {
+				display: none;
+			}
+		}
+
+		&.opened {
+			.header span {
+				background-image: url(/themedna/images/icons/minus-gray.png);
+			}
+			.items {
+				display: block;
+			}
+			.input {
+				display: none;
+			}
+		}
+
+		.input span {
+			display: block;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+	}
+
+	.filter-multilink {
+		.header {
+			position: relative;
+			width: 100%;
+			border: none;
+			background-color: #efefef;
+			padding: 10px 15px;
+			cursor: pointer;
+
+			p {
+				margin: 0;
+				color: #888;
+			}
+
+			span {
+				display: block;
+				position: absolute;
+				top: 13px;
+				right: 10px;
+				width: 14px;
+				height: 14px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		.items {
+			padding: 0 0 5px 20px;
+			margin: 20px 0 10px 0;
+			max-height: 200px;
+
+			.item {
+				margin: 0 0 10px 0;
+
+				input {
+					display: inline-block;
+					vertical-align: top;
+					border: 1px solid #ccc;
+					margin: 5px 0 0 0;
+					height: 17px;
+					width: 17px;
+				}
+				span {
+					display: inline-block;
+					width: ($leftWidth - 160px);
+					vertical-align: top;
+					padding: 5px 0 0 0;
+					font-size: 13px;
+				}
+			}
+		}
+
+		&.closed {
+			.header span {
+				background-image: url(/themedna/images/icons/plus-gray.png);
+			}
+			.items {
+				display: none;
+			}
+		}
+
+		&.opened {
+			.header span {
+				background-image: url(/themedna/images/icons/minus-gray.png);
+			}
+			.items {
+				display: block;
+			}
+		}
+	}
+
+	.tao-filter-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.button-filter-search {
+			flex-basis: 45%;
+			max-width: 130px;
+			min-width: 100px;
+			margin: 0 0 10px 0;
+			height: 40px;
+			border: none;
+			background-color: $mainColor;
+			padding: 10px;
+			border-radius: 10px;
+			color: #fff;
+			vertical-align: top;
+		}
+
+		.tao-reset-filter-button {
+			flex-basis: 45%;
+			max-width: 130px;
+			min-width: 100px;
+			margin: 0;
+			height: 40px;
+			display: block;
+			padding: 10px;
+			border: 1px solid #33374c;
+			border-radius: 10px;
+			vertical-align: top;
+			color: #33374c;
+			text-align: center;
+		}
+	}
+}
